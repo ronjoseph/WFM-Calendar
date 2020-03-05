@@ -1,0 +1,56 @@
+[
+  {
+    "title": "SHIFT 1",
+    "start": "2020-02-02"
+  },
+  {
+    "title": "SRE PREMIERE LEAGUE",
+    "start": "2020-02-07",
+    "end": "2020-02-10"
+  },
+  {
+    "title": "Meeting with Ashwin",
+    "start": "2020-02-09T16:00:00-10:00"
+  },
+  {
+    "id": "999",
+    "title": "Call with Cisco",
+    "start": "2020-02-16T16:00:00-05:00"
+  },
+  {
+    "title": "Refer Nutanix Bible",
+    "url": "https://nutanixbible.com/",
+    "start": "2020-02-11"
+  },
+  {
+    "title": "Meeting",
+    "start": "2020-02-12T10:30:00-05:00",
+    "end": "2020-02-12T12:30:00-05:00"
+  },
+  {
+    "title": "Lunch",
+    "start": "2020-02-12T12:00:00-05:00"
+  },
+  {
+    "title": "Meeting",
+    "start": "2020-02-12T14:30:00-05:00"
+  },
+  {
+    "title": "Happy Hour",
+    "start": "2020-02-12T17:30:00-05:00"
+  },
+  {
+    "title": "Dinner with shikar",
+    "start": "2020-02-12T20:00:00"
+  },
+  {
+    "title": "Birthday Party-KEERTHANA",
+    "start": "2020-02-13",
+    "end" : "2020-02-14"
+  },
+  {
+    "title": "Check Prism",
+    "url": "https://10.136.106.125:9440/console/#login",
+    "start": "2020-02-28"
+  }
+]

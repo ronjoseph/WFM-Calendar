@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<title>WFM-Roaster
+</title>
+<link rel="shortcut icon" href="Nutanix_X.png" type="image/x-icon">
+<img src="ntnx1.png" alt="Nutanix1">
+<meta charset='utf-8' />
+<!--<link href="{{ url_for('static', filename='fullcalendar.min.css') }}" rel='stylesheet' />-->
+<link href="fullcalendar.min.css" rel='stylesheet' />
+<link href="font-awesome-4.7.0/css/font-awesome.min.css" rel='stylesheet' />
+<link href="fullcalendar.print.css" rel='stylesheet' media='print' />
+<script src="lib/moment.min.js"></script>
+<script src="lib/jquery.min.js"></script>
+<script src="fullcalendar.min.js"></script>
+<link href="https://fonts.googleapis.com/css?family=PT+Serif" rel="stylesheet">
+
+<script>
+
+	$(document).ready(function() {
+
+		$('#calendar').fullCalendar({
+			header: {
+				left: 'prev,next today',
+				center: 'title',
+				right: 'month'
+			},
+			defaultDate: '2020-02-19',
+			editable: true,
+			eventLimit: true,
+			events: {
+				url: 'data',
+				error: function() {
+					$('#script-warning').show();
+				}
+			},
+			loading: function(bool) {
+				$('#loading').toggle(bool);
+			}
+		});
+
+	});
+
+</script>
+
+<style>
+.button {
+  display: inline-block;
+  border-radius: 4px;
+  width: 20%;
+  margin-top: 6.66%;
+  margin-left:1%;
+  height: 250px;
+  float: left;
+  background-color: #024da1;
+  border: none;
+  color: #AFD135;
+  text-align: center;
+  font-size: 28px;
+  padding: 20px;
+  transition: all 0.5s;
+  cursor: pointer;
+ 
+}
+
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 25px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+.button1 {
+  display: inline-block;
+  border-radius: 4px;
+  width: 20%;
+  margin-top: 1%;
+  margin-left:1%;
+  height: 250px;
+  float: left;
+  background-color: #024da1;
+  border: none;
+  color: #AFD135;
+  text-align: center;
+  font-size: 28px;
+  padding: 20px;
+  transition: all 0.5s;
+  cursor: pointer;
+ 
+}
+
+.button1 span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button1 span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button1:hover span {
+  padding-right: 25px;
+}
+
+.button1:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+	 img{
+            width: 40%;
+            height: 30%;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 2%;
+            margin-bottom: 2%;
+			align-content: center;
+        }
+
+	body {
+		margin: 0;
+		padding: 0;
+		font-size: 14px;
+		background-image: url('2.png');
+	}
+
+	#script-warning {
+		display: none;
+		background: #eee;
+		border-bottom: 1px solid #ddd;
+		padding: 0 10px;
+		line-height: 40px;
+		text-align: center;
+		font-weight: bold;
+		font-size: 12px;
+		color: red;
+	}
+
+	#loading {
+		display: none;
+		position: absolute;
+		top: 10px;
+		right: 10px;
+	}
+
+	#calendar {
+		max-width: 700px;
+		margin: 10px auto;
+		padding: 0 10px;
+	}
+
+</style>
+
+<!--<link href="{{ url_for('static', filename='MAIN.css') }}" rel='stylesheet' />-->
+<link href="MAIN.css" rel='stylesheet' />
+
+</head>
+<body>
+	
+<div id="main-left">
+	<font color="#4C4C4E">
+
+	<div style="width: 100%;overflow: hidden; margin-top: 5px; margin-left: 1px;">
+		<font size="0" color="#f8f8f8">
+			<br><br>
+			<script type="text/javascript">
+				function checkTime(i) {
+				    if (i < 10) {
+				        i = "0" + i;
+				    }
+				    return i;
+				}
+
+				function startTime() {
+				    var today = new Date();
+				    var h = today.getHours();
+				    var m = today.getMinutes();
+				    var s = today.getSeconds();
+				    m = checkTime(m);
+				    s = checkTime(s);
+				    document.getElementById('time').innerHTML = h + ":" + m + ":" + s;
+				    t = setTimeout(function () {
+				        startTime()
+				    }, 500);
+				}
+				startTime();
+			</script>
+			</font>
+			<br>
+
+			<font color="#f8f8f8">
+				<b><div id="address" align="center" style="background-color: #4C4C4E;"></div></b>
+			</font>
+
+			<div id='calendar'>
+
+			</div>
+		
+	</div>
+	</div>
+
+	</font>
+	<div>
+	<button class="button" style="vertical-align:middle"><span>SRE </span></button>
+	<button class="button" style="vertical-align:middle"><span>Admin </span></button>
+</div>
+<div>
+	<button class="button1" style="vertical-align:middle"><span>Audit </span></button>
+	<button class="button1" style="vertical-align:middle"><span>Super Admin </span></button>
+</div>
+</body>
+</html>

@@ -1,0 +1,10 @@
+
+#show-weather{
+	text-align: center;
+}
+
+#main-left {
+	font-family: 'PT Serif', serif;
+	width: 50%;
+	float: left;
+}
